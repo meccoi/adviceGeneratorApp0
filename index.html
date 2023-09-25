@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container mx-auto">
+    <div class="modal" >
+        <div class="modal-content rounded-lg">
+            <div class="modal-header">
+                <div id="advice-index" class="advice-index text-xs font-bold py-2 pb-4">
+                    ADVICE #177
+                </div>
+            </div>
+            <div class="modal-body">
+                <h2 id="quotes-text" class="text-1xl font-extrabold" >"The only thing necessary for the triumph of evil is for good men to do nothing."</h2>
+            </div>
+            <div class="modal-footer py-8">
+                <img src="images/pattern-divider-desktop.svg" alt="">
+            </div>
+            <img id="generateButton" class="dice" src="images/icon-dice.svg" alt="">
+        </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<script>
+    const quotes = [
+    "Life is what happens when you're busy making other plans.",
+    "In three words I can sum up everything I've learned about life: it goes on.",
+    "The only way to do great work is to love what you do.",
+    "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    "The best way to predict the future is to create it.",
+    "The only thing necessary for the triumph of evil is for good men to do nothing."
+];
+
+// Function to generate and display a random quote.
+// Function to generate and display a random quote.
+// Function to generate and display a random quote.
+// Function to generate and display a random quote.
+function generateRandomQuote() {
+  // Get a random index from the quotes array.
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+
+  // Get the quote at the random index.
+  const randomQuote = quotes[randomIndex];
+
+  // Display the random quote with the slide-up effect.
+  const quoteContainer = document.getElementById("quotes-text");
+
+  // Remove the slide-up class (if it exists) to reset the animation
+  quoteContainer.classList.remove("slide-up");
+
+  // Add the slide-up class again to trigger the animation
+  setTimeout(() => {
+    quoteContainer.textContent = randomQuote;
+    quoteContainer.classList.add("slide-up");
+  }, 10); // A small delay to ensure class removal and re-addition are not optimized out by the browser
+
+  // Add the clicked class to trigger the dice button animation
+  const diceButton = document.getElementById("generateButton");
+  diceButton.classList.add("clicked");
+
+  // Remove the clicked class after the animation is completed
+  setTimeout(() => {
+    diceButton.classList.remove("clicked");
+  }, 500); // Wait for 0.5 seconds (the duration of the rotateDice animation)
+}
+
+// Add a click event listener to the button.
+const generateButton = document.getElementById("generateButton");
+generateButton.addEventListener("click", generateRandomQuote);
+
+
+</script>
+
+
+
+<!-- the power of chatgpt ! -->

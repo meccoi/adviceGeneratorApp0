@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Roboto:wght@400;700&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Roboto:wght@400;700&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Roboto:wght@400;700&family=Space+Mono&display=swap');
+
+body{
+    margin: unset;
+    padding: unset;
+    height: 100vh;
+    font-size: 1.35rem;
+    font-family: 'Manrope', sans-serif;
+    background-color: hsl(218, 23%, 16%);
+    line-height: 1.7;
+    color: hsl(193, 38%, 86%);
+  }
+
+.modal .advice-index{
+    color: hsl(150, 100%, 66%);
+}
+.container{
+    padding: 1.15em;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+  
+.modal-content{
+    max-width: 430px;
+    min-height: 150px;
+    text-align: center;
+    background-color: hsl(217, 19%, 24%);
+    padding: 1.405em;
+    position: relative;
+}
+
+.modal .advice-index{
+    letter-spacing: 4px;
+    font-size: 9px;
+}
+
+.modal .modal-body {
+    line-height: 1.4;
+    
+}
+
+.modal .modal-body h2{
+    color: hsl(193, 38%, 86%);
+    text-align: center;
+  
+
+
+}
+
+
+.dice{
+    background-color: hsl(150, 100%, 66%);
+    padding: .6em;
+    border-radius: 100%;
+    position: absolute;
+    left: 44%;
+  cursor: pointer;
+}
+
+#quotes-text::before{
+    content: '“';
+}
+
+#quotes-text::after{
+    content: '”';
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease both;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+  /* Add this CSS for the dice button animation */
+.dice.clicked {
+    animation: rotateDice 0.5s ease;
+  }
+  
+  @keyframes rotateDice {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
